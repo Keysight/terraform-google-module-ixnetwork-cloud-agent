@@ -14,6 +14,14 @@ data "google_compute_network" "Eth1VpcNetwork" {
 	name = local.Eth1VpcNetworkName
 }
 
+data "google_compute_subnetwork" "Eth2Subnet" {
+	name = local.Eth2SubnetName
+}
+
+data "google_compute_network" "Eth2VpcNetwork" {
+	name = local.Eth2VpcNetworkName
+}
+
 data "google_compute_image" "Image" {
 	name = local.MarketplaceImageName
 	project = local.MarketplaceImageProjectId
