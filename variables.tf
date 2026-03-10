@@ -33,26 +33,6 @@ variable "Eth1VpcNetworkName" {
 	type = string
 }
 
-variable "Eth2PrivateIpAddress" {
-	default = "10.0.3.15"
-	type = string
-}
-
-variable "Eth2PrivateIpAliases" {
-	default = "/28"
-	type = string
-}
-
-variable "Eth2SubnetName" {
-	description = "Name of the subnet associated with the third network interface"
-	type = string
-}
-
-variable "Eth2VpcNetworkName" {
-	description = "Name of the virtual private cloud associated with the third network interface"
-	type = string
-}
-
 variable "InstanceId" {
 	default = "agent"
 	description = "Id of the instance of this module that ensures uniqueness"
@@ -63,13 +43,6 @@ variable "MachineType" {
 	default = "c4-standard-8"
 	description = "Designation for set of resources available to VM"
 	type = string
-	validation {
-		condition = contains([ "c4-standard-4", "c4-standard-8", "c4-standard-48", "c4-standard-96", "c4-standard-192" ], var.MachineType)
-		error_message = <<EOF
-MachineType must be one of the following types:
-	c4-standard-4, c4-standard-8, c4-standard-48, c4-standard-96, c4-standard-192
-		EOF
-	}
 }
 
 variable "MarketplaceImageName" {

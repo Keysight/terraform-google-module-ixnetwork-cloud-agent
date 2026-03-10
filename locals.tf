@@ -7,10 +7,6 @@ locals {
 	Eth1PrivateIpAliases = var.Eth1PrivateIpAliases
 	Eth1SubnetName = var.Eth1SubnetName
 	Eth1VpcNetworkName = var.Eth1VpcNetworkName
-	Eth2PrivateIpAddress = var.Eth2PrivateIpAddress
-	Eth2PrivateIpAliases = var.Eth2PrivateIpAliases
-	Eth2SubnetName = var.Eth2SubnetName
-	Eth2VpcNetworkName = var.Eth2VpcNetworkName
 	InstanceId = var.InstanceId
 	InstanceName = "${local.Preamble}-instance"
 	MachineType = var.MachineType
