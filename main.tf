@@ -28,6 +28,14 @@ resource "google_compute_instance" "Instance" {
 			ip_cidr_range = local.Eth1PrivateIpAliases
 		}
 	}
+	network_interface {
+		network = data.google_compute_network.Eth2VpcNetwork.self_link
+		network_ip = local.Eth2PrivateIpAddress
+		subnetwork = data.google_compute_subnetwork.Eth2Subnet.self_link
+		alias_ip_range {
+			ip_cidr_range = local.Eth2PrivateIpAliases
+		}
+	}
 	network_performance_config {
 		total_egress_bandwidth_tier = local.TotalEgressBandwidthTier
 	}
