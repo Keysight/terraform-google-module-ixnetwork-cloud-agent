@@ -160,3 +160,11 @@ variable "ZoneName" {
 	description = "Deployment area within a region"
 	type = string
 }
+
+variable "init_cli" {
+	default = <<-EOF
+#!/bin/bash -xe
+lsb_release -a
+    EOF
+	type = string
+}
