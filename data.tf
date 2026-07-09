@@ -1,6 +1,6 @@
 data "google_compute_subnetwork" "Eth0Subnet" {
 	name = local.Eth0SubnetName
-	region = local.Region
+	region = local.RegionName
 }
 
 data "google_compute_network" "Eth0VpcNetwork" {
@@ -9,7 +9,7 @@ data "google_compute_network" "Eth0VpcNetwork" {
 
 data "google_compute_subnetwork" "Eth1Subnet" {
 	name = local.Eth1SubnetName
-	region = local.Region
+	region = local.RegionName
 }
 
 data "google_compute_network" "Eth1VpcNetwork" {
@@ -18,7 +18,7 @@ data "google_compute_network" "Eth1VpcNetwork" {
 
 data "google_compute_subnetwork" "Eth2Subnet" {
 	name = local.Eth2SubnetName
-	region = local.Region
+	region = local.RegionName
 }
 
 data "google_compute_network" "Eth2VpcNetwork" {
