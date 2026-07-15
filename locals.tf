@@ -12,7 +12,7 @@ locals {
 	Eth2SubnetName = var.Eth2SubnetName
 	Eth2VpcNetworkName = var.Eth2VpcNetworkName
 	InstanceId = var.InstanceId
-	InstanceName = "${local.Preamble}-instance"
+	InstanceName = var.InstanceName == null ? "${local.Preamble}-instance" : var.InstanceName
 	MachineType = var.MachineType
 	MarketplaceImageName = var.MarketplaceImageName
 	MarketplaceImageProjectId = var.MarketplaceImageProjectId
